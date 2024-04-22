@@ -86,8 +86,8 @@ html,body{
 }
 
 .logo {
-    width: 200px; /* Ajuste conforme necessário */
-    height: 200px; /* Ajuste conforme necessário */
+    width: 200px; 
+    height: 200px;
     margin-bottom: 20px;
     filter: drop-shadow(5px 9px 13px #000000);    
 }
@@ -121,10 +121,6 @@ input {
 .log_inputs button:hover{
     transform: scale(1.1);
 }
-
-/* button:hover {
-    background-color: #0056b3;
-} */
 
 .login_config{
     display: flex;
