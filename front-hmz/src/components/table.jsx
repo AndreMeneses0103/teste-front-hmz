@@ -230,7 +230,7 @@ function Tabela() {
             {showPopup && (
                 <div className="popup">
                     <div className="popup-content">
-                        <h2>Atualizar Funcionário</h2>
+                        <h2>Atualizar Usuário</h2>
                         {userData && (
                             <div className="att_infos">
                                 <div className="att_inputs">
