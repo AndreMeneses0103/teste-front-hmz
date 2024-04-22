@@ -62,7 +62,7 @@ function Home() {
                             className="logo"
                         />
                         <div className="log_inputs">
-                            <p id="login_title">Login <button id="quest" onClick={()=> alert("USUARIO: eve.holt@reqres.in, SENHA: cityslicka.\nNao me pergunte, estou apenas usando de acordo com a API :/")}>?</button></p>
+                            <p id="login_title">Login <button id="quest" onClick={()=> alert("USUARIO: eve.holt@reqres.in, SENHA: cityslicka\nLogin utilizado na API reqres.in")}>?</button></p>
                             <input type="text" placeholder="Usuário" value={user} onChange={(e) => setUser(e.target.value)}/>
                             <input type="password" placeholder="Senha" value={pass} onChange={(e) => setPass(e.target.value)}/>
                             <button onClick={()=> tryLogin()}>Logar</button>

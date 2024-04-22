@@ -32,7 +32,7 @@ function Tabela() {
 
     const handleUpdate = (user) => {
         if (updateUser(user.id)) {
-            successToast("Usuario atualizado com sucesso!");
+            successToast("Usuário atualizado com sucesso! (SIMULAÇÃO, CONSULTAR REQUISIÇÃO)");
             setShowPopup(true);
         } else {
             errorToast("Erro ao atualizar usuario.");
@@ -46,7 +46,7 @@ function Tabela() {
 
     const handleDelete = (user) => {
         if (deleteUser(user.id)) {
-            successToast("Usuario deletado com sucesso!");
+            successToast("Usuario deletado com sucesso! (SIMULAÇÃO, CONSULTAR REQUISIÇÃO)");
             setShowPopup(true);
         } else {
             successToast("Erro ao atualizar usuario.");
@@ -60,8 +60,9 @@ function Tabela() {
 
     async function getUsers() {
         try {
+            console.log("PAGINA:", linhasPorPagina)
             const req = await axios.get(
-                `https://reqres.in/api/users?page=${pagina}`
+                `https://reqres.in/api/users?page=${pagina}&per_page=${linhasPorPagina}`
             );
             setUsers(req.data.data);
             settotalInfo(req.data);
@@ -143,6 +144,10 @@ function Tabela() {
     useEffect(() => {
         setPagina(1);
     }, []);
+
+    useEffect(()=>{
+        setPagina(1);
+    }, [linhasPorPagina])
     return (
         <>
             <table>
@@ -183,8 +188,10 @@ function Tabela() {
                     Linhas por página:{" "}
                     <select
                         className="num_select"
-                        onChange={(e) =>
-                            setLinhasPorPagina(parseInt(e.target.value))
+                        onChange={(e) =>{
+                            const newLinhasPorPagina = parseInt(e.target.value);
+                            setLinhasPorPagina(newLinhasPorPagina);
+                            }
                         }
                     >
                         <option value="2">2</option>
@@ -195,7 +202,7 @@ function Tabela() {
                     </select>
                     <span>
                         {totalInfo
-                            ? `${totalInfo.page} - ${totalInfo.total_pages}`
+                            ? `${totalInfo.data[0].id} - ${totalInfo.data[totalInfo.data.length - 1].id} de ${totalInfo.total}`
                             : "Loading..."}
                     </span>
                     <div className="page_btn">
