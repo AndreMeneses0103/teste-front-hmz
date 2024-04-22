@@ -1,6 +1,6 @@
-# Desafio Front-End HMZ
+# Teste Front-End HMZ
 
-Este é o projeto desenvolvido para o desafio front-end da empresa HMZ. O desafio consiste na criação de uma aplicação web utilizando React para gerenciamento de usuários, utilizando API Rest.
+Este é o projeto desenvolvido para o teste front-end da empresa HMZ. O desafio consiste na criação de uma aplicação web utilizando React para gerenciamento de usuários, utilizando API Rest.
 
 ### :warning: **Observação: Este projeto é uma simulação. Os endpoints de gerenciamento de usuários na API existem, porém, não executam as ações literalmente.**
 
@@ -82,4 +82,4 @@ Este comando iniciará o servidor de desenvolvimento e abrirá automaticamente a
 
 ## Considerações Finais
 
-Este projeto foi desenvolvido como parte do desafio front-end da empresa HMZ. Sinta-se à vontade para explorar este projeto. Se tiver alguma dúvida ou problema, não hesite em entrar em contato. Desde já, agradeço pela oportunidade!
+Este projeto foi desenvolvido como parte do teste front-end da empresa HMZ. Sinta-se à vontade para explorar este projeto. Se tiver alguma dúvida ou problema, não hesite em entrar em contato. Desde já, agradeço pela oportunidade!
