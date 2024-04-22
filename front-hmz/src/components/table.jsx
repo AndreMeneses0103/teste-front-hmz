@@ -60,7 +60,6 @@ function Tabela() {
 
     async function getUsers() {
         try {
-            console.log("PAGINA:", linhasPorPagina)
             const req = await axios.get(
                 `https://reqres.in/api/users?page=${pagina}&per_page=${linhasPorPagina}`
             );
