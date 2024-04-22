@@ -1,0 +1,323 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+:root {
+    --jet: #353535ff;
+    --caribbean-current: #3c6e71ff;
+    --white: #ffffffff;
+    --platinum: #d9d9d9ff;
+    --indigo-dye: #284b63ff;
+}
+
+html,
+body {
+    margin: 0;
+    font-family: "PT Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.Users {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container_users {
+    display: flex;
+    width: 95%;
+    height: 95%;
+    border: 1px solid #ccc;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--caribbean-current);
+    height: 50px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.menu_btn,
+.ring_btn {
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    background-color: transparent;
+}
+
+.menu_btn img,
+.ring_btn img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.show_opt {
+    display: flex;
+    align-items: center;
+    width: 25%;
+    justify-content: space-between;
+}
+
+.show_opt p {
+    margin-left: 20px;
+    color: #fff;
+}
+
+.user_info {
+    display: flex;
+    align-items: center;
+    width: 150px;
+    justify-content: space-around;
+}
+
+.content {
+    display: flex;
+    height: calc(100% - 50px);
+}
+
+.user_btn {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: var(--white);
+}
+
+.user_btn img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem cubra completamente o espaço do botão */
+}
+
+.options {
+    /* flex: 1; */
+    width: 25%;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--indigo-dye);
+    flex-direction: column;
+    border-bottom-left-radius: 10px;
+}
+
+.opt_btn {
+    width: 100%;
+    height: 40px;
+    border: 1px solid black;
+    background-color: rgb(59, 126, 172);
+    color: #000;
+    text-align: left;
+    font-size: 15px;
+    padding-left: 18px;
+    color: #fff;
+}
+
+.table_infos {
+    display: flex;
+    align-items: center;
+    width: 95%;
+    justify-content: space-between;
+}
+
+.table_infos button{
+    width: 100px;
+    height: 30px;
+    background-color: var(--indigo-dye);
+    border-radius: 10px;
+}
+
+.user_text {
+    margin-right: 10px;
+    color: #fff;
+}
+
+button {
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* button:hover {
+    background-color: #0056b3;
+} */
+
+.all_data {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    border: 10px solid black;
+    align-items: center;
+    overflow-y: auto;
+    background-color: rgb(24, 47, 63);
+    border-bottom-right-radius: 10px;
+}
+
+table {
+    width: 95%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin-bottom: 1rem;
+    font-family: Arial, sans-serif;
+}
+
+thead {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+}
+
+th,
+td {
+    padding: 0.75rem;
+    border-bottom: 1px solid #dee2e6;
+    text-align: left;
+    color: #000;
+}
+
+tbody tr:nth-child(even) {
+    background-color: var(--platinum);
+}
+tbody tr:nth-child(odd) {
+    background-color: var(--white);
+}
+
+tbody tr:hover {
+    background-color: #acafb3;
+}
+
+.table_btn {
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    margin-bottom: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    user-select: none;
+    transition: transform 0.2s;
+}
+
+.table_btn img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.table_btn:hover {
+    transform: scale(1.1);
+}
+
+.table_pages {
+    width: 100%;
+    display: grid;
+    justify-items: end;
+}
+
+.table_comp {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    color: #fff;
+}
+
+.popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-30%, -50%);
+    z-index: 9999; /* Ajuste o z-index conforme necessário para garantir que o popup esteja sempre acima dos outros elementos */
+    background-color: white;
+    padding: 20px;
+    border: 1px solid black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilizando o elemento select com a classe num_select */
+select.num_select {
+    height: 35px;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px;
+    cursor: pointer;
+    transition: border-color 0.3s ease-in-out;
+}
+
+/* Estilizando as opções do select quando aberto */
+select.num_select option {
+    background-color: #fff;
+    height: 35px;
+    cursor: pointer;
+}
+
+/* Estilizando as opções do select quando selecionadas */
+select.num_select option:checked {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Estilizando o elemento select com a classe num_select quando estiver em foco */
+select.num_select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.page_btn button{
+    width: 30px;
+    height: 30px;
+    margin: 0 4px;
+    font-size: 2em;
+    background: transparent;
+    transition: linear 0.2s;
+}
+
+.page_btn button:hover {
+    transform: scale(1.2);
+}
+
+.att_infos{
+    display: flex;
+}
+
+.user_avatar{
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+    border: 1px solid black;
+}
+
+.att_btns{
+    display: flex;
+    display: flex;
+    justify-content: space-around;
+    height: 30px;
+    margin: 20px;
+}
+
+.att_btns button{
+    width: 100px;
+    height: 30px;
+    background-color: var(--indigo-dye);
+    border-radius: 10px;
+    transition: linear 0.1s;
+}
+
+.att_btns button:hover {
+    transform: scale(1.1);
+}
+
+h2{
+    color: #000;
+}
