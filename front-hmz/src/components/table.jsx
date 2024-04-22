@@ -138,7 +138,7 @@ function Tabela() {
 
     useEffect(() => {
         getUsers();
-    }, [pagina]);
+    }, [pagina, linhasPorPagina]);
 
     useEffect(() => {
         setPagina(1);
@@ -200,9 +200,7 @@ function Tabela() {
                         <option value="6">6</option>
                     </select>
                     <span>
-                        {totalInfo
-                            ? `${totalInfo.data[0].id} - ${totalInfo.data[totalInfo.data.length - 1].id} de ${totalInfo.total}`
-                            : "Loading..."}
+                        {totalInfo && totalInfo.data.length > 0 ? `${totalInfo.data[0].id} - ${totalInfo.data[totalInfo.data.length - 1].id} de ${totalInfo.total}` : "Loading..."}
                     </span>
                     <div className="page_btn">
                         <button
