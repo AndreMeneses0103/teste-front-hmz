@@ -59,7 +59,7 @@ Para recriar este projeto em seu ambiente local, siga as instruções abaixo:
 
 1. **Clone o Repositório:**
 ```bash
-  git clone https://github.com/seu-usuario/nome-do-repositorio.git
+  git clone https://github.com/AndreMeneses0103/teste-front-hmz.git
 ```
 
 2. **Acesse o Diretório do Projeto:**
